@@ -1,8 +1,8 @@
 #include "../push_swap.h"
 
-void	swap(char s, int *stack)
+void	swap(char s, t_stack *stack)
 {
-    int temp;
+    t_stack temp;
 
     temp = stack[1];
     stack[1] = stack[0];
@@ -12,7 +12,7 @@ void	swap(char s, int *stack)
 	ft_putchar_fd('\n', 1);
 }
 
-void	push(char stack, t_stacks *stacks, int ac)
+void	push(char stack, t_stacks *stacks)
 {
     if (stack == 'a')
     {
@@ -35,9 +35,9 @@ void	push(char stack, t_stacks *stacks, int ac)
 	ft_putchar_fd('\n', 1);
 }
 
-void	rot(char s, int *stack, int ac)
+void	rot(char s, t_stack *stack, int ac)
 {
-    int temp;
+    t_stack temp;
 
 	temp = stack[0];
     shift_up(stack, ac);
@@ -47,9 +47,9 @@ void	rot(char s, int *stack, int ac)
 	ft_putchar_fd('\n', 1);
 }
 
-void	r_rot(char s, int *stack, int ac)
+void	r_rot(char s, t_stack *stack, int ac)
 {
-	int temp;
+	t_stack temp;
 
 	temp = stack[ac - 1];
     shift_down(stack, ac);

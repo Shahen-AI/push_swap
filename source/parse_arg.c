@@ -64,7 +64,7 @@ int check_all_num_2d(int *args_count, char **arg)
     return (2);
 }
 
-int check_args(int *args_count, char argc, char **args)
+int check_args(int *args_count, int argc, char **args)
 {
     int ret;
 
